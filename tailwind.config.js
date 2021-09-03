@@ -9,10 +9,13 @@ module.exports = {
         soft_red: "#fe7867",
         yellow: "#fad400",
         dark_desaturated: "#25564b",
-        Dark_blue: "#19536b",
-        Dark_moderate: "#458c7e",
+        dark_blue: "#19536b",
+        dark_moderate: "#262A36",
         lightblue: "#3EBEFF",
         white_transparent :  "#ffffff40"
+      },
+      height:{
+        half_screen: "50vh"
       }
     },
   },

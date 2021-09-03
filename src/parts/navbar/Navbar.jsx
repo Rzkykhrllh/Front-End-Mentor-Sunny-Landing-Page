@@ -3,6 +3,7 @@ import { Fragment } from "react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import LogoType from "../../images/logo.svg";
+import Triangle from "../../images/triangle.svg";
 
 const navigation = [
   { name: "About", href: "#", current: false },
@@ -96,7 +97,14 @@ export default function Navbar() {
           </div>
 
           <Disclosure.Panel className="sm:hidden">
-            <div className="p-5 mx-5 mt-5 bg-white">
+            <div className="relative p-5 mx-5 mt-5 bg-white ">
+              <div
+                id="segitigas"
+                className="absolute right-0 w-7"
+                style={{ top: "-27px" }}
+              >
+                <img src={Triangle} />
+              </div>
               <div className="pb-3 space-y-5">
                 {navigation.map((item) => (
                   <a
