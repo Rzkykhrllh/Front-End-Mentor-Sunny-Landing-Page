@@ -4,10 +4,11 @@ import Navbar from "../parts/navbar/Navbar";
 
 function LandingPage() {
   return (
-    <div>
+    <>
       <Navbar />
+
       <Hero />
-    </div>
+    </>
   );
 }
 

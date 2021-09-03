@@ -1,11 +1,40 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 function Hero() {
   return (
-    <div>
-      <h1 className="h-screen bg-green-300">Landing Page</h1>
-    </div>
+    <section
+      className="w-full h-screen bg-bottom bg-no-repeat bg-cover bg-yellow"
+      style={{
+        zIndex: -1,
+        // backgroundImage: `url("/images/desktop/image-header.jpg")`,
+      }}
+    ></section>
   );
 }
 
 export default Hero;
+
+function getWindowDimensions() {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height,
+  };
+}
+
+function useWindowDimensions() {
+  const [windowDimensions, setWindowDimensions] = useState(
+    getWindowDimensions()
+  );
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return windowDimensions;
+}
