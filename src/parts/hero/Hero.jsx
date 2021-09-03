@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
 function Hero() {
-    return (
-        <div>
-            <h1 className="bg-blue-300">Landing Page</h1>
-        </div>
-    )
+  return (
+    <div>
+      <h1 className="h-screen bg-green-300">Landing Page</h1>
+    </div>
+  );
 }
 
-export default Hero
+export default Hero;

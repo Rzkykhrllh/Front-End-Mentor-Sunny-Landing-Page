@@ -1,13 +1,14 @@
-import React from 'react'
-import Hero from "../parts/hero/Hero"
-
+import React from "react";
+import Hero from "../parts/hero/Hero";
+import Navbar from "../parts/navbar/Navbar";
 
 function LandingPage() {
-    return (
-        <div>
-            <Hero/>
-        </div>
-    )
+  return (
+    <div>
+      <Navbar />
+      <Hero />
+    </div>
+  );
 }
 
-export default LandingPage
+export default LandingPage;
