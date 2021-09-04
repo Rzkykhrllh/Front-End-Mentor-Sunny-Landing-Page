@@ -12,7 +12,8 @@ module.exports = {
         dark_blue: "#19536b",
         dark_moderate: "#262A36",
         lightblue: "#3EBEFF",
-        white_transparent :  "#ffffff40"
+        white_transparent :  "#ffffff40",
+        mywhite:"#FFFBF8"
       },
       height:{
         half_screen: "50vh"

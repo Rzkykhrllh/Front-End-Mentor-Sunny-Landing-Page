@@ -8,11 +8,11 @@ function Showcase() {
   return (
     <section>
       {data.map((info, index) => (
-        <div className="grid grid-cols-1 sm:grid-cols-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 bg-mywhite">
           {/* left */}
           <div
             className={
-              `flex-initial block py-10 mx-auto my-auto text-center text-gray-700 sm:py-5 sm:text-left ` +
+              ` flex-initial block py-10 mx-auto my-auto text-center text-gray-700 sm:py-5 sm:text-left ` +
               (index % 2 === 0 ? "sm:order-1" : "sm:order-2")
             }
             style={{ width: "80%" }}
