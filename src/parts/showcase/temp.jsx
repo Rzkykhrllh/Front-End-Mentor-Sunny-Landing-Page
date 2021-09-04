@@ -1,27 +1,19 @@
-{
-  /* iterasi 1 */
-}
-<div className="grid grid-cols-1 sm:grid-cols-2">
-  {/* left */}
-  <div
-    className="flex-initial block py-10 mx-auto my-auto text-center text-gray-700 sm:py-5 sm:text-left"
-    style={{ width: "80%" }}
-  >
-    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-fraunces ">
-      Transform your brand
-    </h2>
-    <p className="my-10 text-sm text-gray-400 md:my-5 sm:my-3 md:text-base lg:text-xl lg:my-10">
-      We are a full-service creativity agency speliazing in helping brands grow
-      fast. Engage your clients through compelling visuals that do most of the
-      marketing for you.
-    </p>
-    <a href="#" className="font-fraunces">
-      LEARN MORE
-    </a>
-  </div>
-  <div className="flex-initial order-1 bg-green-900 ">
-    <div className="overflow-hidden img-wrapper">
-      <img src={EggImage} className="w-full" />
+<div
+  className={
+    `flex-initial order-1 bg-green-900 relative` +
+    (index % 2 === 0 ? "sm:order-2" : "sm:order-1")
+  }
+>
+  <div className="relative overflow-hidden img-wrapper">
+    <img src={info2.Image} className="w-full" />
+    <div
+      className="absolute left-0 right-0 z-20 mx-auto text-center mb-44 xl:w-60% w-80%"
+      style={{ top: "63%", color: info2.color }}
+    >
+      <h3 className="lg:text-3xl sm:text-xl font-fraunces">{info2.Title}</h3>
+      <p className="mt-2 text-base sm:text-sm md:mt-4 lg:mt-6 md:text-base lg:text-xl">
+        {info2.Caption}
+      </p>
     </div>
   </div>
 </div>;

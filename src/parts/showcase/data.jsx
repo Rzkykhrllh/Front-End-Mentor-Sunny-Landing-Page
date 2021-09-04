@@ -1,6 +1,3 @@
-import EggImage from "images/desktop/image-transform.jpg";
-import GlassesImage from "images/desktop/image-stand-out.jpg";
-
 const data = [
   {
     Title: "Transform your brand",
