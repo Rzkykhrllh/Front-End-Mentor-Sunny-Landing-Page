@@ -6,7 +6,8 @@ import "./showcase.css";
 
 function Showcase() {
   return (
-    <section>
+    <section id="showcase" className="relative">
+      <div className="absolute" style={{ top: "-64px" }}></div>
       {data.map((info, index) => (
         <div className="grid grid-cols-1 sm:grid-cols-2 bg-mywhite">
           {/* left */}

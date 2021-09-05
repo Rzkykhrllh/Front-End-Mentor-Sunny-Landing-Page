@@ -6,10 +6,10 @@ import LogoType from "../../images/logo.svg";
 import Triangle from "../../images/triangle.svg";
 
 const navigation = [
-  { name: "About", href: "#", current: false },
-  { name: "Services", href: "#", current: false },
-  { name: "Projects", href: "#", current: false },
-  { name: "Contact", href: "#", current: true },
+  { name: "About", href: "#landingpage", current: false },
+  { name: "Services", href: "#showcase", current: false },
+  { name: "Projects", href: "#testimony", current: false },
+  { name: "Contact", href: "#footer", current: true },
 ];
 
 function classNames(...classes) {

@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <section>
+    <section id="footer">
       <div
         className="py-20 text-center bg-green-200"
         style={{ color: "#25534C" }}
@@ -41,15 +41,15 @@ export default Footer;
 const navigation = [
   {
     name: "About",
-    href: "#About",
+    href: "#landingpage",
   },
   {
     name: "Services",
-    href: "#Services",
+    href: "#showcase",
   },
   {
     name: "Projects",
-    href: "#Projects",
+    href: "#testimony",
   },
 ];
 

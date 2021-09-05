@@ -3,7 +3,10 @@ import TestimoniData from "./TestimoniData";
 
 function Testimoni() {
   return (
-    <section className="flex max-h-full min-h-screen px-8 py-16 text-gray-700 bg-mywhite">
+    <section
+      className="flex max-h-full min-h-screen px-8 py-16 text-gray-700 bg-mywhite"
+      id="testimony"
+    >
       <div className="mx-auto my-auto text-center">
         <h2 className="mb-20 text-2xl text-gray-500 font-fraunces">
           CLIENT TESTIMONIAL
