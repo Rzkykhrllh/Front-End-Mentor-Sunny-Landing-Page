@@ -9,7 +9,10 @@ function Showcase() {
     <section id="showcase" className="relative">
       <div className="absolute" style={{ top: "-64px" }}></div>
       {data.map((info, index) => (
-        <div className="grid grid-cols-1 sm:grid-cols-2 bg-mywhite">
+        <div
+          className="grid grid-cols-1 sm:grid-cols-2 bg-mywhite"
+          key={"showcase1-" + index}
+        >
           {/* left */}
           <div
             className={
@@ -52,6 +55,7 @@ function Showcase() {
               `flex-initial order-1 bg-green-900 relative` +
               (index % 2 === 0 ? "sm:order-2" : "sm:order-1")
             }
+            key={"showcase2-" + index}
           >
             <div className="relative overflow-hidden img-wrapper">
               <img

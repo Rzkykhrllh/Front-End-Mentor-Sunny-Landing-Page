@@ -4,7 +4,7 @@ function Gallery() {
   return (
     <section className="grid grid-cols-2 md:grid-cols-4">
       {Picture.map((picture, index) => (
-        <div className="flex-initial">
+        <div className="flex-initial" key={"gallery-" + index}>
           <img src={picture.picture} alt="" className="h-full" />
         </div>
       ))}

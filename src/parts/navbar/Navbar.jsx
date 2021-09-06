@@ -1,9 +1,9 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { Fragment } from "react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import LogoType from "../../images/logo.svg";
 import Triangle from "../../images/triangle.svg";
+import { useEffect } from "react/cjs/react.development";
 
 const navigation = [
   { name: "About", href: "#landingpage", current: false },
@@ -16,7 +16,27 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Navbar() {
+export default function Navbar({ active, setActivePos }) {
+  useEffect(() => {
+    console.log(`Child sekarang di ${active}`);
+    if (active == "About") {
+      setActiveNavbar(0);
+    } else if (active == "Services") {
+      setActiveNavbar(1);
+    } else if (active == "Projects") {
+      setActiveNavbar(2);
+    } else {
+      setActiveNavbar(3);
+    }
+  });
+
+  const setActiveNavbar = (idx) => {
+    for (let i = 0; i <= 3; i++) {
+      navigation[i].current = false;
+    }
+    navigation[idx].current = true;
+  };
+
   return (
     <Disclosure as="nav" className="fixed z-50 w-full ">
       {({ open }) => (
@@ -77,12 +97,16 @@ export default function Navbar() {
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
                       <a
+                        onClick={() => {
+                          console.log("---------------------------");
+                          setActivePos(item.name);
+                        }}
                         key={item.name}
                         href={item.href}
                         className={classNames(
                           item.current
-                            ? "text-gray-900 bg-white rounded-3xl font-fraunces hover:text-white hover:bg-white_transparent" //aktif state
-                            : "text-white hover:text-gray-900", //nonaktif state
+                            ? " bg-white rounded-3xl font-fraunce text-black  hover:bg-white_transparent" //aktif state
+                            : "text-white hover:text-black", //nonaktif state
                           "px-3 py-2 text-sm font-medium"
                         )}
                         aria-current={item.current ? "page" : undefined}

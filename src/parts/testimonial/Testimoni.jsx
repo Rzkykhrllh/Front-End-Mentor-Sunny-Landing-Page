@@ -14,7 +14,10 @@ function Testimoni() {
 
         <div className="flex flex-wrap justify-center">
           {TestimoniData.map((testi, index) => (
-            <div className="w-full mx-6 mt-20 text-center md:flex-none md:w-80 lg:w-96">
+            <div
+              className="w-full mx-6 mt-20 text-center md:flex-none md:w-80 lg:w-96"
+              key={"testimony-" + index}
+            >
               <img
                 src={testi.Photo}
                 alt=""

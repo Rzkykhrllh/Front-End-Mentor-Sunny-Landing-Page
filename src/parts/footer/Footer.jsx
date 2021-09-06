@@ -18,6 +18,7 @@ function Footer() {
             <a
               href={nav.href}
               className="justify-center flex-none hover:text-white"
+              key={"FooterNav" + index}
             >
               {nav.name}
             </a>
@@ -26,7 +27,7 @@ function Footer() {
 
         <div className="flex justify-center mt-16 gap-x-10 hover:text-white">
           {sosmed.map((sosmed, idx) => (
-            <a href={sosmed.href}>
+            <a href={sosmed.href} key={"Sosmed" + idx}>
               <img src={sosmed.src} alt="" />
             </a>
           ))}
