@@ -4,6 +4,7 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import LogoType from "../../images/logo.svg";
 import Triangle from "../../images/triangle.svg";
 import { useEffect } from "react/cjs/react.development";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const navigation = [
   { name: "About", href: "#landingpage", current: false },
@@ -31,6 +32,7 @@ export default function Navbar({ active, setActivePos }) {
   });
 
   const setActiveNavbar = (idx) => {
+    console.log("0. set navbar");
     for (let i = 0; i <= 3; i++) {
       navigation[i].current = false;
     }
@@ -93,6 +95,7 @@ export default function Navbar({ active, setActivePos }) {
                 id="right-navbar"
                 className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
               >
+                {console.log(`lagi render ${active}`)}
                 <div className="hidden sm:block sm:ml-6">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
@@ -109,7 +112,7 @@ export default function Navbar({ active, setActivePos }) {
                             : "text-white hover:text-black", //nonaktif state
                           "px-3 py-2 text-sm font-medium"
                         )}
-                        aria-current={item.current ? "page" : undefined}
+                        aria-current={item.current ? item.current.name : "page"}
                       >
                         {item.name}
                       </a>

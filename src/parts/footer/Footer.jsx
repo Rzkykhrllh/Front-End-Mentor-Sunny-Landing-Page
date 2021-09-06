@@ -1,6 +1,6 @@
 import React from "react";
 
-function Footer() {
+function Footer({ setActivePos }) {
   return (
     <section id="footer">
       <div
@@ -16,6 +16,10 @@ function Footer() {
         >
           {navigation.map((nav, index) => (
             <a
+              onClick={() => {
+                console.log("--------Footer----------");
+                setActivePos(navigation.name);
+              }}
               href={nav.href}
               className="justify-center flex-none hover:text-white"
               key={"FooterNav" + index}

@@ -5,7 +5,6 @@ import Testimoni from "parts/testimonial/Testimoni.jsx";
 import Gallery from "parts/gallery/Gallery.jsx";
 import Footer from "parts/footer/Footer.jsx";
 import React, { useState, useEffect, useRef } from "react";
-
 import useScrollPosition from "@react-hook/window-scroll";
 
 function LandingPage() {
@@ -48,6 +47,10 @@ function LandingPage() {
     changeNav();
   }, [scroll]);
 
+  useEffect(() => {
+    console.log(`use effect of active post ${activePos}`);
+  }, [activePos]);
+
   return (
     <>
       <Navbar active={activePos} setActivePos={setActivePos} />
@@ -64,7 +67,7 @@ function LandingPage() {
       </div>
 
       <Gallery />
-      <Footer />
+      <Footer setActivePos={setActivePos} />
     </>
   );
 }
